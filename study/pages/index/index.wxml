@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<template name="list_item">
+  <view class="list_item ">
+    <image  class="img1" src="../../images/test.png" mode="aspectFit" binderror="" bindload=""></image>
+    <image class="list_icon" src="../../images/fu.png" mode="aspectFit" binderror="" bindload=""></image>
+    <image class="list_icon2" src="../../images/1.png" mode="aspectFit" binderror="" bindload=""></image>
+    <view class="shopname">
+      <text>{{shopname}}</text>
+    </view>
+    <view class="imformation">
+      <text decode space="nbsp">&nbsp;起送<text style="color:#f6383a;">${{}}</text>&nbsp;&nbsp;</text>
+      <text decode space="nbsp" class='border'>&nbsp;配送<text style="color:#f6383a;">${{}}</text>&nbsp;&nbsp;</text>
+      <text decode space="nbsp">&nbsp;约<text style="color:#f6383a;">{{}}分钟</text></text>
+    </view>
+  </view>
+</template>
+
+
+
+<view class="header_address">
+  <view class="header_address_text">
+    <text>{{address}}</text>
+  </view>
+</view>
+<view class="menu">
+
+  <view class="menu classify {{shownavindex == 1? 'active' : ''}}" bindtap="classify">
+    <view class="content">分类</view>
+    <view class="icon"></view>
+  </view>
+
+  <view class="menu list {{shownavindex == 2? 'active' : ''}}" bindtap="list">
+    <view class="content">排序</view>
+    <view class="icon"></view>
+  </view>
+
+  <view class="menu activity {{shownavindex == 3? 'active' : ''}}" bindtap="activity">
+    <view class="content">活动</view>
+    <view class="icon"></view>
+  </view>
+</view>
+
+<view class="temp {{is_open == 'classify' ? 'slidown' : 'slidup'}} {{is_show == 'classify' ? 'appear':'disappear'}}">
+  <view wx:for="{{content}}" wx:key="id">
+    {{item.name}}
+  </view>
+</view>
+
+<view class="temp {{is_open == 'list' ? 'slidown' : 'slidup'}} {{is_show == 'list' ? 'appear':'disappear'}}">
+  <view wx:for="{{content}}" wx:key="id">
+    {{item.name}}
+  </view>
+</view>
+<view class="temp {{is_open == 'activity' ? 'slidown' : 'slidup'}} {{is_show == 'activity' ? 'appear':'disappear'}}">
+  <view wx:for="{{content}}" wx:key="id">
+    {{item.name}}
+  </view>
+</view>
+
+
+
+
+<scroll-view scroll-x style='height=362rpx'>
+ <view wx:for="{{cont}}" wx:key="id">
+    <template is="list_item" data="{{shopname:item.shopname}}"> </template>
+    <view style="position:relative;top:0rpx;background-color:#efeff4;height:40rpx;weight:100%;"></view>
+ </view>
+
+</scroll-view>

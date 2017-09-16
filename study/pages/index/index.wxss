@@ -1,0 +1,153 @@
+/**index.wxss**/
+.page{
+ color: #d1d3d4;
+}
+.header_address{
+  position: relative;
+  background-color: #ff2d4b;
+  height: 65rpx;
+  flex-direction:row;
+  width:100%;
+  z-index: 99;
+}
+.header_address_text{
+  color      : white;
+  text-align : center;
+  padding: 5rpx;
+}
+.menu .content{
+  display: inline-block;
+}
+.menu .icon{
+  display: inline-block;
+  border: 4px solid transparent;
+  border-top: 4px solid #9b9b9b;
+  margin-left: 5px;
+}
+.menu .menu{
+  display: flex;
+  flex: 1;
+  text-align: center;
+  height: 40px;
+  align-items:center;
+  justify-content:center;
+  font-size: 14px;
+}
+.menu{
+    position: relative;
+    z-index: 5;
+    display: flex;
+    border-top: 1rpx solid #d1d3d4;
+    background: #fff;
+}
+.menu.active .content{
+      color: #61beff;
+}
+.menu.active .icon{
+      border-bottom: 4px solid #61beff;
+      border-top:0;
+}
+.temp{
+    position: relative;
+    z-index: 4;
+    display: none;
+    width: 100%;
+    max-height: 550rpx;
+    overflow-y: scroll;
+    padding: 0 0 0 20rpx;
+    line-height:100rpx;
+    background: #fff;
+}
+.temp view{
+    border-bottom: 1px solid #d1d3d4;
+    font-size: 14px;
+    color: #666;
+}
+@keyframes slidown{
+    from{
+        transform:  translateY(-100%);
+        height: 0rpx;
+    }
+    to{
+        transform:  translateY(0%);
+        height: 550rpx;
+    }
+}
+.slidown.appear{
+    display: block ;
+    animation: slidown .7s ease-in both;
+}
+@keyframes slidup{
+    from {
+        transform:  translateY(0%);
+        height: 550rpx;
+    }
+    to{
+        transform:  translateY(-100%);
+        height: 0rpx;
+    }
+
+}
+.slidup.appear{
+    display: block;
+    animation: slidup .7s ease-in both;
+}
+
+
+.disappear{
+    display: none;
+
+}
+
+.list_item{
+  position: relative;
+  top:0px;
+  height: 200rpx;
+
+  padding: 0rpx 0rpx 20rpx;
+  border-top: 1px solid #d1d3d4;
+  border-bottom: 1px solid #d1d3d4;
+  z-index: 3;
+}
+
+
+.list_item .img1{
+  width: 33%;
+  height: 180rpx;
+  padding: 10rpx 0 10rpx;
+}
+.list_item .shopname{
+  display: inline-block;
+  position: absolute;
+  top: 20rpx;
+  font-size: 35rpx;
+  font-weight:bold;
+}
+.list_item .imformation{
+    display: inline-block;
+    position: absolute;
+    bottom: 50rpx;
+    font-size: 30rpx;
+}
+.list_item .imformation .border{
+    border-left :  1px solid #d1d3d4;
+    border-right:  1px solid #d1d3d4;
+}
+
+
+.list_icon{
+    display: inline-block;
+    position:absolute;
+    top:30rpx;
+    right:30rpx;
+    width:60rpx;
+    height: 60rpx;
+}
+.list_icon2{
+    display: inline-block;
+    position:absolute;
+    top:14rpx;
+    left:33%;
+    width:160rpx;
+    height: 160rpx;
+}

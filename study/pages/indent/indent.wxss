@@ -1,0 +1,128 @@
+.page{
+  position: relative;
+ background-color: #efeff4;
+ height: 1110rpx;
+ weight: 100%;
+ z-index: -1;
+}
+.header{
+  position: relative;
+  background-color: #ff2d4b;
+  height: 65rpx;
+  flex-direction:row;
+  width:100%;
+  z-index: 99;
+}
+.header_text{
+
+  color      : white;
+  text-align : center;
+  padding    : 5rpx;
+}
+
+.list_item{
+  height :  300rpx;
+  background-color: #ffffff;
+  padding: 1px;
+  border-top:  1rpx solid #d1d3d4;
+
+}
+.list_item .heard{
+  position: relative;
+  height: 90rpx;
+
+}
+.list_item .heard .shopicon{
+  position: absolute;
+  left:20rpx;
+  top: 5rpx;
+  height:80rpx;
+  width:80rpx;
+}
+.list_item .heard .d_icon{
+  position: absolute;
+  left: 280rpx;
+  top: 30rpx;
+  height: 35rpx;
+  width: 35rpx;
+}
+.list_item .heard text{
+  position: absolute;
+  left: 140rpx;
+  top: 25rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+
+
+
+
+.list_item .middle{
+  height: 140rpx;
+  border-top:  1rpx solid #d1d3d4;
+}
+.list_item .middle .shopname{
+  display: block;
+  position: absolute;
+  font-size:40rpx;
+  left:40rpx;
+  top: 180rpx;
+  color: #3d4145;
+
+}
+.list_item .middle .time{
+  display: block;
+  position: absolute;
+  font-size:25rpx;
+  left:45rpx;
+  top: 235rpx;
+  color: #999999;
+
+}
+.list_item .middle .price{
+  display: block;
+  position: absolute;
+  font-size:40rpx;
+  right:45rpx;
+  top: 180rpx;
+  color: #707070;
+}
+.list_item .middle .condition{
+  display: block;
+  position: absolute;
+  font-size:27rpx;
+  right:40rpx;
+  top: 225rpx;
+  color:#ff2d4b;
+}
+
+
+
+
+.list_item .below{
+  display: block;
+   height: 70rpx;
+   weight: 200rpx;
+   border-top: 1rpx solid #d1d3d4;
+}
+.list_item .below .b_left{
+  display:  inline-block;
+  width: 370rpx;
+  height: 70rpx;
+  border-right: 1rpx solid #d1d3d4;
+}
+.list_item .below .b_right{
+
+  display: inline-block;
+  width: 370rpx;
+  height: 70rpx;
+
+}
+
+.below text{
+  font-size: 30rpx;
+  display: block;
+  padding: 10rpx;
+  text-align: center;
+}

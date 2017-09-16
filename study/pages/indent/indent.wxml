@@ -1,0 +1,45 @@
+<!--indent.wxml-->
+<view class="page">
+
+
+
+<template name="indent_list">
+  <view class="list_item">
+    <view class="heard">
+      <image class="shopicon" src="../../images/test.png" mode="aspectFit" binderror="" bindload=""></image>
+      <text>{{shopname}}</text>
+      <image class="d_icon" src="../../images/icon1.png" mode="aspectFit" binderror="" bindload=""></image>
+    </view>
+
+    <view class="middle">
+     <text class="shopname">{{shop_name}}</text>
+     <text class="time">{{shop_time}}</text>
+     <text class="price"> <text>$</text>{{shop_price}}</text>
+     <text class="condition">{{shop_condition}}</text>
+    </view>
+
+    <view class="below">
+    <view class="b_left"> <text>确认送达</text></view>
+    <view class="b_right"> <text>催单</text></view>
+    </view>
+  </view>
+</template>
+
+
+
+<view class="header">
+  <view class="header_text">
+    <text>我的订单</text>
+  </view>
+</view>
+
+
+ <scroll-view class="indent_list" scroll-x style='height:1110rpx'>
+     <view wx:for="{{indent_list}}" wx:key="id">
+        <template is="indent_list" data="{{shop_name:item.shop_name,shop_time:item.shop_time}}"> </template>
+        <view style="position:relative;top:0rpx;background-color:#efeff4;height:40rpx;weight:100%;"></view>
+     </view>
+ </scroll-view>
+
+
+</view>

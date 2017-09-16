@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/indent/indent",
+    "pages/mypage/mypage"
+  ],
+  "window":{
+    "navigationBarBackgroundColor"  : "#393a3f",
+    "backgroundColor"               : "#000",
+    "navigationBarTextStyle"        : "white",
+    "backgroundColor"               : "#efeff4",
+    "navigationBarTitleText"        : "帮吧外卖",
+    "enablePullDownRefresh"         : "ture"
+  },
+
+  "tabBar": {
+      "color"          : "#929292",
+
+      "selectedColor"  : "#ff2c4a",
+
+      "backgroundColor": "#f7f7f8",
+
+      "borderStyle"    : "white",
+
+
+
+        "list"         : [{
+                         "pagePath"         : "pages/index/index",
+                         "text"             : "首页",
+                         "iconPath"         : "images/index.png",
+                         "selectedIconPath" : "images/selected_index.png"
+                       }, {
+                         "pagePath"         : "pages/indent/indent",
+                         "text"             : "订单",
+                         "iconPath"         : "images/indent.png",
+                         "selectedIconPath" : "images/selected_indent.png"
+                       },{
+                         "pagePath"         : "pages/mypage/mypage",
+                         "text"             : "我的",
+                         "iconPath"         : "images/mypage.png",
+                         "selectedIconPath" : "images/selected_mypage.png"
+                    }]
+   },
+
+   "networkTimeout": {
+   "request"      : 10000,
+   "downloadFile" : 10000
+ },
+ "debug": false
+}
